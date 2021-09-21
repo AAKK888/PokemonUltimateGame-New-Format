@@ -1,4 +1,11 @@
 import sprites
+
+background = pygame.image.load(path.join(img_dir, "BackroundGrassyPlains.png")).convert()
+goodback = pygame.transform.scale(background, (var.WIDTH, var.HEIGHT))
+background_rect = goodback.get_rect()
+screen.fill(var.BLUE)
+
+
 class Game:
     def __init__(self):
         # initialize game window, etc
