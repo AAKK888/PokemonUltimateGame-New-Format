@@ -1,3 +1,4 @@
+import sprites
 class Game:
     def __init__(self):
         # initialize game window, etc
@@ -81,6 +82,9 @@ class Game:
     def update(self):
         # Game Loop - Update
         self.all_sprites.update()
+        self.wildpokemongroup.update()
+        self.pokemongroup.update()
+        self.bushes.group.update()
 
     def events(self):
         # Game Loop - events
@@ -96,7 +100,7 @@ class Game:
         self.screen.fill(var.BLACK)
         self.all_sprites.draw(self.screen)
         # *after* drawing everything, flip the display
-        pg.display.flip()
+        pygame.display.flip()
 
     def show_start_screen(self):
         # game splash/start screen
