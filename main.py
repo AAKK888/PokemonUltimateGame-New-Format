@@ -5,7 +5,16 @@ goodback = pygame.transform.scale(background, (var.WIDTH, var.HEIGHT))
 background_rect = goodback.get_rect()
 screen.fill(var.BLUE)
 
+font_name = pygame.font.match_font('arial')
 
+def draw_text(text, size, x, y):
+    font = pygame.font.Font(font_name, size)
+    text_surface = font.render(text, True, var.WHITE)
+    text_rect = text_surface.get_rect()
+    text_rect.midtop = (x, y)
+    screen.blit(text_surface, text_rect)
+
+    
 class Game:
     def __init__(self):
         # initialize game window, etc
