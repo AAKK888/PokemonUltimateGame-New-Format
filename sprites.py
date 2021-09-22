@@ -105,11 +105,7 @@ class PichuEvo(pygame.sprite.Sprite):
         if self.rect.top < 393:
             self.rect.top = 393
         if self.rect.bottom > var.HEIGHT:
-            self.rect.bottom = var.HEIGHT - 1
-
-    def domove(self):
-        amove = Moves(self.rect.centerx, self.rect.top)
-        movegroup.add(amove)
+            self.rect.bottom = var.HEIGHT - 
 
 
 class BulbasaurEvo(pygame.sprite.Sprite):
