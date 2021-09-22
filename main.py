@@ -1,4 +1,4 @@
-import sprites
+from sprites import *
 
 background = pygame.image.load(path.join(img_dir, "BackroundGrassyPlains.png")).convert()
 goodback = pygame.transform.scale(background, (var.WIDTH, var.HEIGHT))
@@ -110,7 +110,10 @@ class Game:
                 if self.playing:
                     self.playing = False
                 self.running = False
-
+            if event.type == pygame.K_DOWN:
+				if event.key == pygame.K_SPACE:
+					amove = Moves(Pikachu.rect.centerx, Pikachu.rect.centery)
+			
     def draw(self):
         # Game Loop - draw
         self.screen.fill(var.BLACK)
